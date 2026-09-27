@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEK1ONE - IT Consulting & Infrastructure Solutions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background-color: var(--bg-light); line-height: 1.6; }
+
+        header { background-color: var(--primary); color: var(--white); padding: 1.5rem 2rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; color: var(--white); text-decoration: none; }
+        .logo span { color: var(--accent); }
+
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: var(--white); text-align: center; padding: 5rem 1.5rem; }
+        .hero h1 { font-size: 2.75rem; margin-bottom: 1rem; font-weight: 700; }
+        .hero p { font-size: 1.25rem; color: #94a3b8; max-width: 700px; margin: 0 auto 2rem; }
+        .btn { display: inline-block; background-color: var(--accent); color: var(--white); padding: 0.85rem 1.75rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+        .btn:hover { background-color: #1d4ed8; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2rem; color: var(--primary); }
+        .section-title p { color: var(--text-light); margin-top: 0.5rem; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: var(--white); padding: 2rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: transform 0.2s; }
+        .service-card:hover { transform: translateY(-4px); }
+        .service-icon { font-size: 2rem; color: var(--accent); margin-bottom: 1.25rem; }
+        .service-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--primary); }
+        .service-card p { color: var(--text-light); font-size: 0.95rem; }
+
+        .contact-section { background-color: var(--primary); color: var(--white); text-align: center; padding: 4rem 1.5rem; margin-top: 2rem; }
+        .contact-section h2 { margin-bottom: 1rem; font-size: 2rem; }
+        .contact-section p { color: #94a3b8; margin-bottom: 2rem; }
+        .contact-info { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .contact-item { display: flex; align-items: center; gap: 0.5rem; color: var(--white); text-decoration: none; font-size: 1.1rem; }
+        .contact-item i { color: var(--accent); }
+
+        footer { text-align: center; padding: 2rem; background-color: #0b0f19; color: #64748b; font-size: 0.875rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">TEK<span>1</span>ONE</a>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Reliable IT Systems & Infrastructure Consulting</h1>
+        <p>Providing expert systems administration, network infrastructure, database optimization, and strategic IT management for businesses.</p>
+        <a href="#services" class="btn">Explore Services</a>
+    </section>
+
+    <div class="container" id="services">
+        <div class="section-title">
+            <h2>Core Technical Expertise</h2>
+            <p>End-to-end solutions designed to streamline operations, bolster security, and ensure uptime.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Systems Administration -->
+            <div class="service-card">
+                <i class="fas fa-server service-icon"></i>
+                <h3>Systems Administration & Directory Services</h3>
+                <p>Management of server environments, user identities, and access controls via Active Directory, domain services, and centralized system policies.</p>
+            </div>
+
+            <!-- Network & Firewall Infrastructure -->
+            <div class="service-card">
+                <i class="fas fa-network-wired service-icon"></i>
+                <h3>Network & Firewall Security</h3>
+                <p>Deployment and optimization of enterprise network switches, Wi-Fi access points, and SonicWall firewalls for secure, reliable operations across single or multi-facility environments.</p>
+            </div>
+
+            <!-- ERP & Database Management -->
+            <div class="service-card">
+                <i class="fas fa-database service-icon"></i>
+                <h3>ERP & Database Management</h3>
+                <p>Specialized administration, maintenance, and query troubleshooting for ERP systems (including Prophet 21) and SQL database backends.</p>
+            </div>
+
+            <!-- Site & Cloud Infrastructure -->
+            <div class="service-card">
+                <i class="fas fa-cloud service-icon"></i>
+                <h3>Cloud, DNS & Hosting Deployment</h3>
+                <p>Modernizing web presence, secure DNS routing via Cloudflare, and establishing fast, lightweight static hosting deployments on GitHub Pages and custom domains.</p>
+            </div>
+
+            <!-- Hardware Audits & Infrastructure Scans -->
+            <div class="service-card">
+                <i class="fas fa-microchip service-icon"></i>
+                <h3>Infrastructure Audits & Asset Management</h3>
+                <p>Comprehensive network asset discovery, IP space auditing, hardware cataloging, and infrastructure mapping across enterprise facilities.</p>
+            </div>
+
+            <!-- Communications & Workspaces -->
+            <div class="service-card">
+                <i class="fas fa-tasks service-icon"></i>
+                <h3>Organizational Workspaces & Collaboration</h3>
+                <p>Setting up Google Workspace domains, centralized team calendars, domain email routing, and integrated workflow systems to keep teams aligned.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-section" id="contact">
+        <h2>Ready to Optimize Your Technology Infrastructure?</h2>
+        <p>Reach out to discuss system evaluations, network projects, or ongoing technical consulting.</p>
+        
+        <div class="contact-info">
+            <a href="mailto:jshea305@gmail.com" class="contact-item">
+                <i class="fas fa-envelope"></i> jshea305@gmail.com
+            </a>
+            <a href="tel:4017416367" class="contact-item">
+                <i class="fas fa-phone"></i> (401) 741-6367
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TEK1ONE. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
