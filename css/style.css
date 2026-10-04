@@ -196,3 +196,34 @@ img {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adds a subtle drop shadow */
   margin-bottom: 1.5rem;
 }
+/* Parade & Local Copy Styling */
+.section-lead {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.parade-copy {
+  background-color: #f8f9fa;
+  border-left: 4px solid #0056b3;
+  padding: 1.25rem 1.5rem;
+  border-radius: 6px;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+.parade-copy h3 {
+  margin-top: 0;
+  color: #0056b3;
+  font-size: 1.25rem;
+}
+
+.parade-copy p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.parade-copy p:last-child {
+  margin-bottom: 0;
+}
