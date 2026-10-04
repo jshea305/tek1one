@@ -190,7 +190,9 @@ img {
 .hero-image {
   width: 100%;
   height: auto;
-  object-fit: contain;
-  border-radius: 8px;
+  object-fit: contain; /* Shows entire photo without cropping */
+  border-radius: 12px; /* Rounds the corners */
+  border: 3px solid #0056b3; /* Adds a solid border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adds a subtle drop shadow */
   margin-bottom: 1.5rem;
 }
