@@ -101,4 +101,73 @@
         footer { background: #090d16; color: #64748b; text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
         footer a { color: #94a3b8; text-decoration: none; }
         footer a:hover { color: var(--white); }
+/* Navigation Header */
+header { 
+    background: var(--primary); 
+    color: var(--white); 
+    padding: 1rem 1.25rem; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+.logo { 
+    font-size: 1.4rem; 
+    font-weight: 700; 
+    letter-spacing: -0.5px; 
+    text-decoration: none; 
+    color: var(--white); 
+}
+.logo span { color: var(--accent); }
+
+.header-actions { 
+    display: flex; 
+    gap: 1rem; 
+    align-items: center; 
+}
+.phone-link { 
+    color: var(--white); 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 0.9rem; 
+    transition: color 0.2s; 
+}
+.phone-link:hover { color: var(--accent); }
+
+.btn-header { 
+    background-color: var(--accent); 
+    color: var(--white); 
+    padding: 0.5rem 0.9rem; 
+    border-radius: 6px; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 0.85rem; 
+    transition: background 0.2s; 
+    white-space: nowrap; 
+}
+.btn-header:hover { background-color: var(--accent-hover); }
+
+/* Mobile Clean-up Media Query */
+@media (max-width: 768px) {
+    /* Hide the top text/call links on mobile to prevent overlapping */
+    .header-actions .phone-link { 
+        display: none; 
+    }
+    
+    .hero h1 { 
+        font-size: 2rem; 
+    }
+    
+    .hero-buttons { 
+        flex-direction: column; 
+        width: 100%; 
+    }
+    
+    .btn-cta, .btn-cta-secondary { 
+        width: 100%; 
+        text-align: center; 
+    }
+}
     </style>
