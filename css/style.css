@@ -189,8 +189,8 @@ img {
 /* Hero / Featured Image Container */
 .hero-image {
   width: 100%;
-  max-height: 350px; /* Constrains vertical height */
-  object-fit: cover;  /* Crops cleanly without stretching */
+  max-height: 350px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1.5rem;
 }
