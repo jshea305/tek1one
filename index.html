@@ -1,148 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Slocum Junk Solutions</title>
-  
-  <!-- Fast-Loading Static CSS -->
-  <link rel="stylesheet" href="./css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEK1ONE - Fast, Secure Static Websites for Small Businesses</title>
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --text: #334155;
+            --light-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --subtext: #64748b;
+        }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/logo.png">
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); background-color: var(--light-bg); line-height: 1.6; }
+
+        /* Navigation Header */
+        header { background: var(--primary); color: var(--white); padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; text-decoration: none; color: var(--white); }
+        .logo span { color: var(--accent); }
+        
+        .header-actions { display: flex; gap: 1rem; align-items: center; }
+        .phone-link { color: var(--white); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .phone-link:hover { color: var(--accent); }
+        .btn-header { background-color: var(--accent); color: var(--white); padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+        .btn-header:hover { background-color: var(--accent-hover); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: var(--white); text-align: center; padding: 5rem 1.5rem; }
+        .hero h1 { font-size: 2.75rem; margin-bottom: 1rem; font-weight: 700; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 750px; margin: 0 auto 2rem; }
+        .btn-cta { display: inline-block; background-color: var(--accent); color: var(--white); padding: 0.85rem 1.75rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+        .btn-cta:hover { background-color: var(--accent-hover); }
+
+        /* Container & Sections */
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .section-title p { color: var(--subtext); font-size: 1.1rem; }
+
+        /* Benefits Grid */
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+        .benefit-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.75rem; text-align: center; }
+        .benefit-icon { font-size: 2rem; color: var(--accent); margin-bottom: 1rem; }
+        .benefit-card h3 { font-size: 1.15rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .benefit-card p { font-size: 0.95rem; color: var(--subtext); }
+
+        /* Services Grid */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem; }
+        .service-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; }
+        .service-icon { font-size: 1.75rem; color: var(--accent); margin-bottom: 1rem; }
+        .service-card h3 { font-size: 1.25rem; color: var(--primary); margin-bottom: 0.75rem; }
+        .service-card ul { list-style: none; margin-top: 0.75rem; }
+        .service-card li { font-size: 0.95rem; color: var(--text); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .service-card li i { color: var(--accent); font-size: 0.8rem; }
+
+        /* Contact & Form Section */
+        .contact-section { background: var(--primary); color: var(--white); padding: 4rem 1.5rem; id: contact; }
+        .contact-container { max-width: 650px; margin: 0 auto; }
+        .contact-header { text-align: center; margin-bottom: 2rem; }
+        .contact-header h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .contact-header p { color: #94a3b8; }
+        
+        .contact-card { background: var(--card-bg); color: var(--text); border-radius: 8px; padding: 2rem; }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 0.95rem; }
+        .form-group textarea { resize: vertical; height: 120px; }
+        .btn-submit { width: 100%; background-color: var(--accent); color: var(--white); border: none; padding: 0.85rem; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+        .btn-submit:hover { background-color: var(--accent-hover); }
+
+        /* Footer */
+        footer { background: #090d16; color: #64748b; text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
+        footer a { color: #94a3b8; text-decoration: none; }
+        footer a:hover { color: var(--white); }
+    </style>
 </head>
 <body>
 
-  <!-- Static Navigation Header -->
-  <header class="site-header">
-    <div class="nav-container">
-      
-      <!-- Business Logo -->
-      <div class="logo">
-        <a href="index.html">SLOCUM <span>JUNK SOLUTIONS</span></a>
-      </div>
+    <!-- Navigation Header -->
+    <header>
+        <a href="#" class="logo">TEK1<span>ONE</span></a>
+        <div class="header-actions">
+            <a href="mailto:jshea305@gmail.com" class="phone-link"><i class="fas fa-envelope"></i> Email Us</a>
+            <a href="#contact" class="btn-header">Get Started</a>
+        </div>
+    </header>
 
-      <!-- Navigation Menu -->
-      <nav>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Fast, Secure, Zero-Maintenance Websites for Small Businesses</h1>
+        <p>Stop paying high monthly platform fees for slow, bloated sites. We build ultra-fast static websites designed to turn local visitors into paying customers.</p>
+        <a href="#contact" class="btn-cta">Build Your Site Today</a>
+    </section>
 
-      <!-- Direct Phone & Action Links for Mobile Visitors -->
-      <div class="header-actions">
-        <a href="tel:4012672803" class="phone-link">📞 Call Us</a>
-        <a href="sms:4012672803?body=Hi%20Slocum%20Junk%20Solutions%2C%20I%20need%20a%20quote!" class="phone-link">💬 Text Us</a>
-        <a href="contact.html" class="btn-book">Book Now</a>
-      </div>
+    <!-- Core Benefits Section -->
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose a Static Website?</h2>
+            <p>Modern static sites eliminate complexity, overhead, and maintenance hassles.</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-bolt benefit-icon"></i>
+                <h3>Blazing Fast</h3>
+                <p>Loads instantly on mobile networks, preventing potential clients from bouncing away.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-dollar-sign benefit-icon"></i>
+                <h3>Zero Monthly Hosting</h3>
+                <p>Hosted on global networks like GitHub Pages & Cloudflare with no monthly platform fees.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-shield-halved benefit-icon"></i>
+                <h3>Unbreakable Security</h3>
+                <p>No databases or vulnerable scripts to hack, exploit, or infect with malware.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-screwdriver-wrench benefit-icon"></i>
+                <h3>Zero Maintenance</h3>
+                <p>No plugin updates, database repairs, or unexpected site crashes. It just works 24/7.</p>
+            </div>
+        </div>
+
+        <!-- What We Build Section -->
+        <div class="section-title">
+            <h2>What We Build & Support</h2>
+            <p>End-to-end web architecture tailored specifically for local service businesses.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Modern Web Design & Migration</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Custom HTML/CSS builds</li>
+                    <li><i class="fas fa-check"></i> Platform migration off Wix, Weebly, or WordPress</li>
+                    <li><i class="fas fa-check"></i> Mobile-first layouts with direct action links</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-network-wired service-icon"></i>
+                <h3>Domain & Hosting Infrastructure</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Cloudflare DNS setup & SSL encryption</li>
+                    <li><i class="fas fa-check"></i> Clean 301 redirects to preserve legacy SEO</li>
+                    <li><i class="fas fa-check"></i> Google Workspace MX, SPF, & DKIM email setup</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-bullseye service-icon"></i>
+                <h3>High-Converting Lead Generation</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Serverless form integration sent to your inbox</li>
+                    <li><i class="fas fa-check"></i> One-tap Call (tel:) and Text (sms:) actions</li>
+                    <li><i class="fas fa-check"></i> Embedded Google reviews and photo galleries</li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <!-- High-Converting Hero Section -->
-  <section class="hero">
-    <h1>Contact Slocum Junk Solutions</h1>
-    <p>
-      Need a fast estimate? Call or text us directly at 
-      <a href="tel:4012672803" style="color: var(--primary-orange); text-decoration: underline; font-weight: bold;">401-267-2803</a> 
-      or 
-      <a href="sms:4012672803?body=Hi%20Slocum%20Junk%20Solutions%2C%20I%20need%20a%20quote!" style="color: var(--primary-orange); text-decoration: underline; font-weight: bold;">Send a Text</a>, 
-      or fill out the simple contact form below.
-    </p>
-  </section>
+    <!-- Contact & Lead Form Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Ready for a Better Website?</h2>
+                <p>Fill out the form below or email us directly at <a href="mailto:jshea305@gmail.com" style="color: #60a5fa;">jshea305@gmail.com</a> to discuss your project.</p>
+            </div>
 
-  <!-- Static Contact Form (No Database or Backend Server Required) -->
-  <main class="container" style="max-width: 650px;">
-    <div class="card">
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <!-- Directs submissions straight to your email inbox -->
-        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+            <div class="contact-card">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
 
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required placeholder="John Smith">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Smith">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="name@company.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website">Current Website / Business Name</label>
+                        <input type="text" id="website" name="website" placeholder="e.g. mysmallsite.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your business and web needs..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Request Free Consultation</button>
+                </form>
+            </div>
         </div>
+    </section>
 
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required placeholder="401-555-0199">
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required placeholder="name@example.com">
-        </div>
-
-        <div class="form-group">
-          <label for="service">Service Needed</label>
-          <input type="text" id="service" name="service" placeholder="e.g. Garage Cleanout, Commercial Hauling">
-        </div>
-
-        <div class="form-group">
-          <label for="message">Details / Items to Remove</label>
-          <textarea id="message" name="message" required placeholder="Describe the items or job details..."></textarea>
-        </div>
-
-        <button type="submit" class="btn" style="width: 100%;">Submit Request</button>
-      </form>
-    </div>
-  </main>
-
-  <!-- Localized Business Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      
-      <!-- Regional Service Target Header -->
-      <div class="footer-hero-text">
-        <h2>PROUDLY SERVING ALL OF RHODE ISLAND</h2>
-        <p>We stay in constant communication with our customers until the job is done. Call, text, or message us anytime for a free quote.</p>
-      </div>
-
-      <div class="footer-grid">
-        
-        <!-- Local SEO Towns & Contact Methods -->
-        <div class="footer-col footer-about">
-          <h3>SLOCUM JUNK SOLUTIONS</h3>
-          <p class="service-lead">Serving homes and businesses across Rhode Island:</p>
-          <p class="towns-list">
-            East Greenwich, Exeter, Narragansett, North Kingstown, South Kingstown, Carolina, Hope Valley, Jamestown, Kenyon, Kingston, Peace Dale, Saunderstown, Shannock, Slocum, Wakefield, West Kingston, Wyoming
-          </p>
-          <div class="footer-contact-info">
-            <p>📞 <a href="tel:4012672803">Call: 401-267-2803</a></p>
-            <p>💬 <a href="sms:4012672803?body=Hi%20Slocum%20Junk%20Solutions%2C%20I%20need%20a%20quote!">Text: 401-267-2803</a></p>
-            <p>✉️ <a href="mailto:slocumjunkco@gmail.com">slocumjunkco@gmail.com</a></p>
-          </div>
-        </div>
-
-        <!-- Static Quick Links -->
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="reviews.html">Customer Reviews</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- Hours & Call to Action -->
-        <div class="footer-col">
-          <h4>HOURS</h4>
-          <ul class="footer-hours-list">
-            <li><span>Monday - Sunday:</span> Open 24 Hours</li>
-          </ul>
-          <a href="contact.html" class="btn-footer-cta">Schedule a Haul</a>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Slocum Junk Solutions. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 TEK1ONE. All Rights Reserved. | <a href="mailto:jshea305@gmail.com">jshea305@gmail.com</a></p>
+    </footer>
 
 </body>
 </html>
