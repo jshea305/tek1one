@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEK1ONE - Fast, Secure Static Websites for Small Businesses</title>
+    <title>TEK1ONE - Rhode Island Static Web Design for Small Businesses</title>
     
     <!-- Google Fonts & Font Awesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,6 +40,7 @@
 
         /* Hero Section */
         .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: var(--white); text-align: center; padding: 5rem 1.5rem; }
+        .hero-badge { display: inline-block; background: rgba(37, 99, 235, 0.2); border: 1px solid var(--accent); color: #93c5fd; padding: 0.35rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.5px; }
         .hero h1 { font-size: 2.75rem; margin-bottom: 1rem; font-weight: 700; line-height: 1.2; }
         .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 750px; margin: 0 auto 2rem; }
         .hero-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; align-items: center; }
@@ -54,6 +55,11 @@
         .section-title h2 { font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem; }
         .section-title p { color: var(--subtext); font-size: 1.1rem; }
 
+        /* Local Banner Box */
+        .local-banner { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 2rem; margin-bottom: 4rem; text-align: center; }
+        .local-banner h3 { color: var(--primary); font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .local-banner p { color: #334155; font-size: 1rem; max-width: 800px; margin: 0 auto; }
+
         /* Benefits Grid */
         .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
         .benefit-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.75rem; text-align: center; }
@@ -62,13 +68,25 @@
         .benefit-card p { font-size: 0.95rem; color: var(--subtext); }
 
         /* Services Grid */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem; margin-bottom: 4rem; }
         .service-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; }
         .service-icon { font-size: 1.75rem; color: var(--accent); margin-bottom: 1rem; }
         .service-card h3 { font-size: 1.25rem; color: var(--primary); margin-bottom: 0.75rem; }
         .service-card ul { list-style: none; margin-top: 0.75rem; }
         .service-card li { font-size: 0.95rem; color: var(--text); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
         .service-card li i { color: var(--accent); font-size: 0.8rem; }
+
+        /* Clients Grid */
+        .client-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .client-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; border-top: 4px solid var(--accent); }
+        .client-tag { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 0.5rem; }
+        .client-card h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .client-card p { font-size: 0.95rem; color: var(--subtext); margin-bottom: 1.25rem; }
+        .client-features { list-style: none; font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .client-features li { margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
+        .client-features li i { color: #16a34a; font-size: 0.8rem; }
+        .client-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent); font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+        .client-link:hover { text-decoration: underline; }
 
         /* Contact & Form Section */
         .contact-section { background: var(--primary); color: var(--white); padding: 4rem 1.5rem; }
@@ -104,55 +122,64 @@
         <a href="#" class="logo">TEK1<span>ONE</span></a>
         <div class="header-actions">
             <a href="tel:4015428623" class="phone-link"><i class="fas fa-phone"></i> Call Us</a>
-            <a href="sms:4015428623?body=Hi%20TEK1ONE%2C%20I'm%20interested%20in%20a%20website%20quote!" class="phone-link"><i class="fas fa-comment-dots"></i> Text Us</a>
+            <a href="sms:4015428623?body=Hi%20TEK1ONE%2C%20I'm%20a%20local%20RI%20business%20interested%20in%20a%20website!" class="phone-link"><i class="fas fa-comment-dots"></i> Text Us</a>
             <a href="#contact" class="btn-header">Get Started</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Fast, Secure, Zero-Maintenance Websites for Small Businesses</h1>
-        <p>Stop paying high monthly platform fees for slow, bloated sites. We build ultra-fast static websites designed to turn local visitors into paying customers.</p>
+        <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> Proudly Based in Rhode Island</div>
+        <h1>Fast, Secure Websites Built for Rhode Island Small Businesses</h1>
+        <p>Stop paying high monthly platform fees for slow, bloated sites. TEK1ONE provides local RI businesses with ultra-fast, zero-maintenance websites designed to turn local visitors into paying clients.</p>
         <div class="hero-buttons">
             <a href="tel:4015428623" class="btn-cta"><i class="fas fa-phone"></i> Call (401) 542-8623</a>
-            <a href="sms:4015428623?body=Hi%20TEK1ONE%2C%20I'm%20interested%20in%20a%20website%20quote!" class="btn-cta-secondary"><i class="fas fa-comment-dots"></i> Text Us</a>
+            <a href="sms:4015428623?body=Hi%20TEK1ONE%2C%20I'm%20a%20local%20RI%20business%20interested%20in%20a%20website!" class="btn-cta-secondary"><i class="fas fa-comment-dots"></i> Text Us</a>
         </div>
     </section>
 
-    <!-- Core Benefits Section -->
+    <!-- Container -->
     <div class="container">
+        
+        <!-- Local Commitment Banner -->
+        <div class="local-banner">
+            <h3><i class="fas fa-handshake" style="color: var(--accent);"></i> Real Local Support across Ocean State</h3>
+            <p>From South County and North Kingstown to Providence and Newport, we work directly with local contractors, service providers, and business owners. No overseas support queues or automated bots—just straightforward, local IT and web consulting.</p>
+        </div>
+
+        <!-- Core Benefits Section -->
         <div class="section-title">
-            <h2>Why Choose a Static Website?</h2>
-            <p>Modern static sites eliminate complexity, overhead, and maintenance hassles.</p>
+            <h2>Why Local Businesses Choose Static Sites</h2>
+            <p>Modern static web builds eliminate monthly platform overhead and loading delays.</p>
         </div>
 
         <div class="benefits-grid">
             <div class="benefit-card">
                 <i class="fas fa-bolt benefit-icon"></i>
-                <h3>Blazing Fast</h3>
-                <p>Loads instantly on mobile networks, preventing potential clients from bouncing away.</p>
+                <h3>Blazing Fast Speed</h3>
+                <p>Loads instantly on smartphone networks across RI so local leads never bounce away.</p>
             </div>
             <div class="benefit-card">
                 <i class="fas fa-dollar-sign benefit-icon"></i>
-                <h3>Zero Monthly Hosting</h3>
-                <p>Hosted on global networks like GitHub Pages & Cloudflare with no monthly platform fees.</p>
+                <h3>Zero Monthly Fees</h3>
+                <p>Hosted on global networks like GitHub Pages & Cloudflare with zero recurring hosting costs.</p>
             </div>
             <div class="benefit-card">
                 <i class="fas fa-shield-halved benefit-icon"></i>
                 <h3>Unbreakable Security</h3>
-                <p>No databases or vulnerable scripts to hack, exploit, or infect with malware.</p>
+                <p>No databases or vulnerable WordPress plugins to hack, break, or infect with spam.</p>
             </div>
             <div class="benefit-card">
                 <i class="fas fa-screwdriver-wrench benefit-icon"></i>
                 <h3>Zero Maintenance</h3>
-                <p>No plugin updates, database repairs, or unexpected site crashes. It just works 24/7.</p>
+                <p>No software updates, database repairs, or unexpected downtime. It just works 24/7.</p>
             </div>
         </div>
 
         <!-- What We Build Section -->
         <div class="section-title">
             <h2>What We Build & Support</h2>
-            <p>End-to-end web architecture tailored specifically for local service businesses.</p>
+            <p>Practical web design and domain infrastructure tailored for local Rhode Island trade and service companies.</p>
         </div>
 
         <div class="services-grid">
@@ -160,46 +187,100 @@
                 <i class="fas fa-code service-icon"></i>
                 <h3>Modern Web Design & Migration</h3>
                 <ul>
-                    <li><i class="fas fa-check"></i> Custom HTML/CSS builds</li>
-                    <li><i class="fas fa-check"></i> Platform migration off Wix, Weebly, or WordPress</li>
-                    <li><i class="fas fa-check"></i> Mobile-first layouts with direct action links</li>
+                    <li><i class="fas fa-check"></i> Custom mobile-first HTML/CSS builds</li>
+                    <li><i class="fas fa-check"></i> Migration off expensive Wix, Weebly, or WordPress sites</li>
+                    <li><i class="fas fa-check"></i> One-tap Call & Text mobile action buttons</li>
                 </ul>
             </div>
 
             <div class="service-card">
                 <i class="fas fa-network-wired service-icon"></i>
-                <h3>Domain & Hosting Infrastructure</h3>
+                <h3>Domain & Infrastructure Support</h3>
                 <ul>
-                    <li><i class="fas fa-check"></i> Cloudflare DNS setup & SSL encryption</li>
-                    <li><i class="fas fa-check"></i> Clean 301 redirects to preserve legacy SEO</li>
+                    <li><i class="fas fa-check"></i> Cloudflare DNS configuration & free SSL security</li>
+                    <li><i class="fas fa-check"></i> Clean 301 domain redirects to preserve local SEO</li>
                     <li><i class="fas fa-check"></i> Google Workspace MX, SPF, & DKIM email setup</li>
                 </ul>
             </div>
 
             <div class="service-card">
                 <i class="fas fa-bullseye service-icon"></i>
-                <h3>High-Converting Lead Generation</h3>
+                <h3>High-Converting Lead Tools</h3>
                 <ul>
-                    <li><i class="fas fa-check"></i> Serverless form integration sent to your inbox</li>
-                    <li><i class="fas fa-check"></i> One-tap Call (tel:) and Text (sms:) actions</li>
-                    <li><i class="fas fa-check"></i> Embedded Google reviews and photo galleries</li>
+                    <li><i class="fas fa-check"></i> Serverless contact forms delivered straight to your email</li>
+                    <li><i class="fas fa-check"></i> Instant photo quote messaging for mobile visitors</li>
+                    <li><i class="fas fa-check"></i> Embedded Google Map directions & review displays</li>
                 </ul>
             </div>
         </div>
+
+        <!-- Local Client Success Stories -->
+        <div class="section-title">
+            <h2>Local Client Success Stories</h2>
+            <p>Proven static site performance for local businesses right here in Rhode Island.</p>
+        </div>
+
+        <div class="client-grid">
+            <!-- Client 1 -->
+            <div class="client-card">
+                <div class="client-tag">Southern RI Junk Removal</div>
+                <h3>Slocum Junk Solutions</h3>
+                <p>A lightweight, mobile-first static website built to deliver instant estimate requests across South County.</p>
+                <ul class="client-features">
+                    <li><i class="fas fa-check-circle"></i> Direct Call & Text-for-Quote integration</li>
+                    <li><i class="fas fa-check-circle"></i> Serverless form routing straight to inbox</li>
+                    <li><i class="fas fa-check-circle"></i> Zero-cost hosting on GitHub Pages</li>
+                </ul>
+                <a href="https://slocumjunksolutions.com" target="_blank" class="client-link">
+                    Visit Website <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <!-- Client 2 -->
+            <div class="client-card">
+                <div class="client-tag">Rhode Island Event & Wedding Band</div>
+                <h3>Down City Band</h3>
+                <p>A sleek, high-performing website built to showcase live performance videos and stream event booking inquiries.</p>
+                <ul class="client-features">
+                    <li><i class="fas fa-check-circle"></i> Custom Cloudflare DNS & email routing</li>
+                    <li><i class="fas fa-check-circle"></i> Embedded Wedding Wire customer reviews</li>
+                    <li><i class="fas fa-check-circle"></i> Fast background video streaming</li>
+                </ul>
+                <a href="#contact" class="client-link">
+                    View Case Study <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Client 3 -->
+            <div class="client-card">
+                <div class="client-tag">Commercial Distribution</div>
+                <h3>Crown Supply Co.</h3>
+                <p>Web landing properties, multi-location contact pages, and domain routing engineered alongside enterprise ERP infrastructure.</p>
+                <ul class="client-features">
+                    <li><i class="fas fa-check-circle"></i> Domain migration & SSL enforcement</li>
+                    <li><i class="fas fa-check-circle"></i> Authenticated Google Workspace email delivery</li>
+                    <li><i class="fas fa-check-circle"></i> Multi-branch contact routing</li>
+                </ul>
+                <a href="#contact" class="client-link">
+                    View Case Study <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
     </div>
 
     <!-- Contact & Lead Form Section -->
     <section class="contact-section" id="contact">
         <div class="contact-container">
             <div class="contact-header">
-                <h2>Ready for a Better Website?</h2>
-                <p>Call or text us directly at <strong>(401) 542-8623</strong>, email <a href="mailto:jshea305@gmail.com" style="color: #60a5fa;">jshea305@gmail.com</a>, or fill out the form below.</p>
+                <h2>Let's Talk About Your Rhode Island Website</h2>
+                <p>Reach out to a local consultant directly at <strong>(401) 542-8623</strong>, email <a href="mailto:jshea305@gmail.com" style="color: #60a5fa;">jshea305@gmail.com</a>, or fill out the form below.</p>
             </div>
 
             <!-- Quick Direct Contact Actions -->
             <div class="quick-contact-bar">
                 <a href="tel:4015428623" class="quick-contact-btn"><i class="fas fa-phone"></i> Call (401) 542-8623</a>
-                <a href="sms:4015428623?body=Hi%20TEK1ONE%2C%20I'm%20interested%20in%20a%20website%20quote!" class="quick-contact-btn"><i class="fas fa-comment-dots"></i> Text (401) 542-8623</a>
+                <a href="sms:4015428623?body=Hi%20TEK1ONE%2C%20I'm%20a%20local%20RI%20business%20interested%20in%20a%20website!" class="quick-contact-btn"><i class="fas fa-comment-dots"></i> Text (401) 542-8623</a>
             </div>
 
             <div class="contact-card">
@@ -218,7 +299,7 @@
 
                     <div class="form-group">
                         <label for="website">Current Website / Business Name</label>
-                        <input type="text" id="website" name="website" placeholder="e.g. mysmallsite.com">
+                        <input type="text" id="website" name="website" placeholder="e.g. Rhode Island Business Name">
                     </div>
 
                     <div class="form-group">
@@ -226,7 +307,7 @@
                         <textarea id="message" name="message" required placeholder="Tell us about your business and web needs..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn-submit">Request Free Consultation</button>
+                    <button type="submit" class="btn-submit">Request Free Local Consultation</button>
                 </form>
             </div>
         </div>
@@ -234,11 +315,8 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 TEK1ONE. All Rights Reserved. | <a href="tel:4015428623">(401) 542-8623</a> | <a href="mailto:jshea305@gmail.com">jshea305@gmail.com</a></p>
+        <p>&copy; 2026 TEK1ONE - Rhode Island IT & Web Consulting. All Rights Reserved. | <a href="tel:4015428623">(401) 542-8623</a> | <a href="mailto:jshea305@gmail.com">jshea305@gmail.com</a></p>
     </footer>
-
-</body>
-</html>
 
 </body>
 </html>
