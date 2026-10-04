@@ -32,8 +32,8 @@
         .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; text-decoration: none; color: var(--white); }
         .logo span { color: var(--accent); }
         
-        .header-actions { display: flex; gap: 1rem; align-items: center; }
-        .phone-link { color: var(--white); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .header-actions { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+        .phone-link { color: var(--white); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
         .phone-link:hover { color: var(--accent); }
         .btn-header { background-color: var(--accent); color: var(--white); padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
         .btn-header:hover { background-color: var(--accent-hover); }
@@ -42,8 +42,11 @@
         .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: var(--white); text-align: center; padding: 5rem 1.5rem; }
         .hero h1 { font-size: 2.75rem; margin-bottom: 1rem; font-weight: 700; line-height: 1.2; }
         .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 750px; margin: 0 auto 2rem; }
+        .hero-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; align-items: center; }
         .btn-cta { display: inline-block; background-color: var(--accent); color: var(--white); padding: 0.85rem 1.75rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
         .btn-cta:hover { background-color: var(--accent-hover); }
+        .btn-cta-secondary { display: inline-block; background-color: transparent; border: 2px solid var(--accent); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.2s; }
+        .btn-cta-secondary:hover { background-color: var(--accent); color: var(--white); }
 
         /* Container & Sections */
         .container { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
@@ -68,11 +71,17 @@
         .service-card li i { color: var(--accent); font-size: 0.8rem; }
 
         /* Contact & Form Section */
-        .contact-section { background: var(--primary); color: var(--white); padding: 4rem 1.5rem; id: contact; }
+        .contact-section { background: var(--primary); color: var(--white); padding: 4rem 1.5rem; }
         .contact-container { max-width: 650px; margin: 0 auto; }
         .contact-header { text-align: center; margin-bottom: 2rem; }
         .contact-header h2 { font-size: 2rem; margin-bottom: 0.5rem; }
         .contact-header p { color: #94a3b8; }
+
+        /* Quick Contact Bar */
+        .quick-contact-bar { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .quick-contact-btn { background: #1e293b; border: 1px solid #334155; color: var(--white); padding: 0.75rem 1.25rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: background 0.2s; }
+        .quick-contact-btn:hover { background: #334155; color: var(--white); }
+        .quick-contact-btn i { color: var(--accent); }
         
         .contact-card { background: var(--card-bg); color: var(--text); border-radius: 8px; padding: 2rem; }
         .form-group { margin-bottom: 1.25rem; }
@@ -94,7 +103,8 @@
     <header>
         <a href="#" class="logo">TEK1<span>ONE</span></a>
         <div class="header-actions">
-            <a href="mailto:jshea305@gmail.com" class="phone-link"><i class="fas fa-envelope"></i> Email Us</a>
+            <a href="tel:4015428623" class="phone-link"><i class="fas fa-phone"></i> Call Us</a>
+            <a href="sms:4015428623?body=Hi%20TEK1ONE%2C%20I'm%20interested%20in%20a%20website%20quote!" class="phone-link"><i class="fas fa-comment-dots"></i> Text Us</a>
             <a href="#contact" class="btn-header">Get Started</a>
         </div>
     </header>
@@ -103,7 +113,10 @@
     <section class="hero">
         <h1>Fast, Secure, Zero-Maintenance Websites for Small Businesses</h1>
         <p>Stop paying high monthly platform fees for slow, bloated sites. We build ultra-fast static websites designed to turn local visitors into paying customers.</p>
-        <a href="#contact" class="btn-cta">Build Your Site Today</a>
+        <div class="hero-buttons">
+            <a href="tel:4015428623" class="btn-cta"><i class="fas fa-phone"></i> Call (401) 542-8623</a>
+            <a href="sms:4015428623?body=Hi%20TEK1ONE%2C%20I'm%20interested%20in%20a%20website%20quote!" class="btn-cta-secondary"><i class="fas fa-comment-dots"></i> Text Us</a>
+        </div>
     </section>
 
     <!-- Core Benefits Section -->
@@ -180,7 +193,13 @@
         <div class="contact-container">
             <div class="contact-header">
                 <h2>Ready for a Better Website?</h2>
-                <p>Fill out the form below or email us directly at <a href="mailto:jshea305@gmail.com" style="color: #60a5fa;">jshea305@gmail.com</a> to discuss your project.</p>
+                <p>Call or text us directly at <strong>(401) 542-8623</strong>, email <a href="mailto:jshea305@gmail.com" style="color: #60a5fa;">jshea305@gmail.com</a>, or fill out the form below.</p>
+            </div>
+
+            <!-- Quick Direct Contact Actions -->
+            <div class="quick-contact-bar">
+                <a href="tel:4015428623" class="quick-contact-btn"><i class="fas fa-phone"></i> Call (401) 542-8623</a>
+                <a href="sms:4015428623?body=Hi%20TEK1ONE%2C%20I'm%20interested%20in%20a%20website%20quote!" class="quick-contact-btn"><i class="fas fa-comment-dots"></i> Text (401) 542-8623</a>
             </div>
 
             <div class="contact-card">
@@ -215,8 +234,11 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 TEK1ONE. All Rights Reserved. | <a href="mailto:jshea305@gmail.com">jshea305@gmail.com</a></p>
+        <p>&copy; 2026 TEK1ONE. All Rights Reserved. | <a href="tel:4015428623">(401) 542-8623</a> | <a href="mailto:jshea305@gmail.com">jshea305@gmail.com</a></p>
     </footer>
+
+</body>
+</html>
 
 </body>
 </html>
