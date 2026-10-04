@@ -170,4 +170,19 @@ header {
         text-align: center; 
     }
 }
+/* Responsive Image Defaults */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
+/* Rounded Profile Headshot */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0056b3;
+  margin: 0 auto 1.5rem auto;
+}
