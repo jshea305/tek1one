@@ -237,3 +237,11 @@ img {
     background-position: center;
     background-repeat: no-repeat;
 }
+.hero p {
+    color: #ffffff; /* Brighter solid white for max contrast */
+    font-size: 1.25rem; /* Makes text slightly larger */
+    font-weight: 500; /* Makes font slightly thicker */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Dark shadow behind letters */
+    max-width: 750px;
+    margin: 0 auto 1.5rem auto; /* Centers paragraph text neatly */
+}
