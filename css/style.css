@@ -228,7 +228,7 @@ img {
   margin-bottom: 0;
 }
 .hero {
-    background-image: url('../media/prov-bg3.png');
+    background-image: url('/tek1one/media/prov-bg3.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
