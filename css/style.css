@@ -227,7 +227,7 @@ img {
 .parade-copy p:last-child {
   margin-bottom: 0;
 }
-hero {
+.hero {
     background-image: url('../media/prov-bg3.png');
     background-size: cover;
     background-position: center;
