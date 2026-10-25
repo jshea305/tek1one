@@ -227,12 +227,8 @@ img {
 .parade-copy p:last-child {
   margin-bottom: 0;
 }
-.hero {
-    background-image: linear-gradient(
-        rgba(15, 23, 42, 0.10), 
-        rgba(15, 23, 42, 0.30)
-    ), 
-    url('../media/prov-bg3.png');
+hero {
+    background-image: url('../media/prov-bg3.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
