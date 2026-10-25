@@ -229,8 +229,8 @@ img {
 }
 .hero {
     background-image: linear-gradient(
-        rgba(15, 23, 42, 0.55), 
-        rgba(15, 23, 42, 0.80)
+        rgba(15, 23, 42, 0.40), 
+        rgba(15, 23, 42, 0.65)
     ), 
     url('/tek1one/media/prov-bg3.png');
     background-size: cover;
