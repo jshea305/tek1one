@@ -188,13 +188,15 @@ img {
 }
 /* Hero / Featured Image Container */
 .hero-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain; /* Shows entire photo without cropping */
-  border-radius: 12px; /* Rounds the corners */
-  border: 3px solid #0056b3; /* Adds a solid border */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adds a subtle drop shadow */
-  margin-bottom: 1.5rem;
+    max-width: 500px; /* Adjust this value (e.g., 400px, 500px, 600px) to shrink or grow the image */
+    width: 100%;       /* Ensures it stays responsive on small mobile screens */
+    height: auto;
+    display: block;    /* Required to center the image */
+    margin: 0 auto 1.5rem auto; /* Centers the image horizontally and keeps the bottom margin */
+    object-fit: contain;
+    border-radius: 12px;
+    border: 3px solid #0056b3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 /* Parade & Local Copy Styling */
 .section-lead {
