@@ -228,11 +228,11 @@ img {
   margin-bottom: 0;
 }
 .hero {
-  /* Dark blue gradient overlay for high text contrast over the image */
+  /* Dark blue gradient overlay for high text contrast over the image 
   background-image: linear-gradient(
       rgba(15, 23, 42, 0.10), 
       rgba(15, 23, 42, 0.20)
-    ), 
+    ), */
     url('../media/prov-bg3.png');
   background-size: cover;
   background-position: center;
