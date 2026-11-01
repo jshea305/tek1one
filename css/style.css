@@ -312,8 +312,8 @@ img {
         rgba(15, 23, 42, 0.6)
     ),
     url('/media/4th.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: 120% auto;
+    background-position: center 25%;
     background-repeat: no-repeat;
     padding: 80px 20px;
     color: #fff;
