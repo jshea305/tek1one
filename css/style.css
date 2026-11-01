@@ -306,4 +306,19 @@ img {
 .local-benefits-wrapper .benefit-card i {
     color: #ffffff;
 }
+.about-section {
+    background-image: linear-gradient(
+        rgba(15, 23, 42, 0.45),
+        rgba(15, 23, 42, 0.6)
+    ),
+    url('/media/4th.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px;
+    color: #fff;
+}
+.about-section h2,
+.about-section p {
+    color: #ffffff;
 }
