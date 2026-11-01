@@ -247,19 +247,6 @@ img {
     max-width: 750px;
     margin: 0 auto 1.5rem auto; /* Centers paragraph text neatly */
 }
-/* Outer container section with background photo */
-.local-benefits-wrapper {
-   /* background-image: linear-gradient(
-        rgba(15, 23, 42, 0.85),
-        rgba(15, 23, 42, 0.85)
-    ),*/
-    url('/media/np.png'); /* Adjust to match your new image filename */[cite: 9]
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 0px 0;
-    width: 100%;
-}
 
 /* Make titles and subtext white for contrast */
 .local-benefits-wrapper .section-title h2,
