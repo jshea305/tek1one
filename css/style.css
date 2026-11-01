@@ -247,3 +247,46 @@ img {
     max-width: 750px;
     margin: 0 auto 1.5rem auto; /* Centers paragraph text neatly */
 }
+/* Outer container section with background photo */
+.local-benefits-wrapper {
+    background-image: linear-gradient(
+        rgba(15, 23, 42, 0.85),
+        rgba(15, 23, 42, 0.85)
+    ),
+    url('/media/newport-bridge.jpg'); /* Adjust to match your new image filename */[cite: 9]
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    width: 100%;
+}
+
+/* Make titles and subtext white for contrast */
+.local-benefits-wrapper .section-title h2,
+.local-benefits-wrapper .section-title p {
+    color: #ffffff;
+}
+
+/* Semi-transparent local commitment banner */
+.local-benefits-wrapper .local-banner {
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.local-benefits-wrapper .local-banner h3,
+.local-benefits-wrapper .local-banner p {
+    color: #ffffff;
+}
+
+/* Glassmorphism style for benefit cards over background photo */
+.local-benefits-wrapper .benefit-card {
+    background-color: rgba(255, 255, 255, 0.95); /* Keep white cards or change to rgba(255, 255, 255, 0.1) for translucent */
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
