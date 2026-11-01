@@ -257,8 +257,8 @@ img {
 /* Local Benefits Section - Newport Bridge Background */
 .local-benefits-wrapper {
     background-image: linear-gradient(
-        rgba(15, 23, 42, 0.75),
-        rgba(15, 23, 42, 0.85)
+        rgba(15, 23, 42, 0.30),
+        rgba(15, 23, 42, 0.45)
     ),
     url('/media/NP-Bridge.jpeg'); /* Make sure this matches your uploaded extension (.jpg or .jpeg) */
     background-size: cover;
